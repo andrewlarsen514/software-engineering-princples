@@ -1,4 +1,5 @@
 # software-engineering-princples
+
 Repository containing examples and walkthroughs of Concord's Core Engineering Principles. These principles are as follows:
 
 1. Clean Code
@@ -14,13 +15,31 @@ The remainder of the document contains an introduction to each principle along w
 
 Clean code is the idea that software should be easy to understand what’s it’s doing, it’s easy to maintain, and it’s obvious what it’s doing.
 
-So what are some practices that we can do to write “clean code”
+So what are some practices that we can do to write “clean code”?
 
 ### Meaningful names
 
-Naming is hard in software - however it goes a long way into making code easy to understand and maintain.  When creating classes, methods, variables, etc it’s important that the name makes it clear what it is for.   For example listOfUsers is much more helpful than list.  To take that a step further, listOfUsersToRemove is even more explicit and tells exactly that that list is going to be used for.  
+Naming is hard in software - however it goes a long way into making code easy to understand and maintain.  When creating classes, methods, variables, etc it’s important that the name makes it clear what it is for. For example, consider the following variable representing a list of users:
 
-This can also be useful for determining if a class or method is doing too much (and thus violating the Single Responsibility Principle).  If you cannot think of a clear and concise name to describe what a method is doing, that is probably a sign it’s doing too much!
+```java
+private final List<User> list = new ArrayList();
+```
+
+By its instantiation it is clear that this is a list of users. However, what about if need to maintain two lists of users?
+
+```java
+private final List<User> list1 = new ArrayList();
+private final List<User> list2 = new ArrayList();
+```
+
+Let's assume we need to add a list of users to another list.  With that in mind better names for the lists might be:
+
+```java
+private final List<User> currentUsers = new ArrayList();
+private final List<User> usersToAdd = new ArrayList();
+```
+
+Naming can also be useful for determining if a class or method is doing too much (and thus violating the Single Responsibility Principle).  If you cannot think of a clear and concise name to describe what a method is doing, that is probably a sign it’s doing too much!
 
 Naming consistency is also very important when writing clean code.  Picking a consistent name for an entity throughout a code base can go a long way in helping others (and yourself) improve the readability of a code base.
 
