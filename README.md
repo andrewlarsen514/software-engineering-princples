@@ -47,15 +47,16 @@ Naming consistency is also very important when writing clean code.  Picking a co
 
 The phrase “self documenting code” often makes some engineer’s skin crawl - but there is merit to this principle.  Use of comments should be used only to explain why we’re doing something in the code.  For example, a weird workaround to deal with some quirky external dependency.  Comments should never describe what code is doing.  This is a clear sign that it is overly complex, the naming is unclear, or both.
 
+This is also important because over time the code might change, and then the code and comments 'say' different things/disagree
 
 ### Functions
 
 There are a number of practices to keep in mind when writing clean functions including:
 
-Keep methods small
-Do one thing
-Small number of arguments
-Easy to test
+1. Keep methods small
+2. Do one thing
+3. Small number of arguments
+4. Easy to test
 
 ***Keep Methods Small***
 
