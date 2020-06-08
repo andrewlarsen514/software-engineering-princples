@@ -76,7 +76,7 @@ If a method hits any of the above cases that often means you may want to conside
 
 A function should do one thing, and do it well.  Said another way, a method should have only one reason to change.  This means that a function should only be concerned with a specific area or part of a domain, which given a new or changed requirement, would require said function to be modified.  
 
-Side effects are a common code small that can tell us a function is not doing one thing only.  Side effects are when a method does something that is not overtly obvious.  For example, take the following method that returns the next the integer after the provided integer:
+Side effects are a common code smell that can tell us a function is not doing one thing only.  Side effects are when a method does something that is not overtly obvious.  For example, take the following method that returns the next the integer after the provided integer:
 
 ```java
 private Integer getNextNumber(final Integer number){
