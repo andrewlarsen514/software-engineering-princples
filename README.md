@@ -15,7 +15,7 @@ The remainder of the document contains an introduction to each principle along w
 
 Clean code is the idea that software should be easy to understand what’s it’s doing, it’s easy to maintain, and it’s obvious what it’s doing.
 
-So what are some practices that we can do to write “clean code”?
+So what are some practices that we can follow to write “clean code”?
 
 ### Meaningful names
 
