@@ -13,13 +13,13 @@ The remainder of the document contains an introduction to each principle along w
 
 ## Clean Code
 
-Clean code is the idea that software should be easy to understand what’s it’s doing, it’s easy to maintain, and it’s obvious what it’s doing.
+Clean code is the idea that software should be written in a way such that it is easy to understand and maintain.
 
 So what are some practices that we can follow to write “clean code”?
 
 ### Meaningful names
 
-Naming is hard in software - however it goes a long way into making code easy to understand and maintain.  When creating classes, methods, variables, etc it’s important that the name makes it clear what it is for. For example, consider the following variable representing a list of users:
+Naming is hard in software - however it goes a long way into making code easy to understand and maintain.  When creating classes, methods, variables, etc. it’s important that the name makes it clear what it is for. For example, consider the following variable representing a list of users:
 
 ```java
 private final List<User> list = new ArrayList();
@@ -47,7 +47,7 @@ Naming consistency is also very important when writing clean code.  Picking a co
 
 The phrase “self documenting code” often makes some engineer’s skin crawl - but there is merit to this principle.  Use of comments should be used only to explain why we’re doing something in the code.  For example, a weird workaround to deal with some quirky external dependency.  Comments should never describe what code is doing.  This is a clear sign that it is overly complex, the naming is unclear, or both.
 
-This is also important because over time the code might change, and then the code and comments 'say' different things/disagree
+This is also important because over time the code might change, and then the code and comments 'say' different things/disagree.
 
 ### Functions
 
@@ -96,7 +96,7 @@ private Integer getNextNumber(final Integer number){
 
 ***Arguments***
 
-A long list of arguments is often a code smell that should be avoided.  If a method has more than, say, 3 arguments it’s probably a sign that either.
+A long list of arguments is often a code smell that should be avoided.  If a method has more than, say, 3 arguments it’s probably a sign that either:
 
 1. The method is doing too much
 2. There is a new Class that should be introduced to represent the data.
