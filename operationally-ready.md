@@ -7,6 +7,7 @@ Our goal here is to explain some challenges of supporting production code, with 
 1. Consider your documentation needs
 2. Write code that is serviceable in a production environment
 3. Write code that is maintainable over time
+4. Write code that can meet your availability and capacity needs
 
 
 ### Documentation
@@ -55,7 +56,7 @@ It is important that this configuration information is managed in a safe locatio
 
 To help balance the above considerations, here are recommended best practices:
 
-1. Use your framework's support of different levels of log severity, such as TRACE, DEBUG, INFO, WARN, ERROR to facilitate log configuration and filtering
+1. Use your framework's support of different levels of log severity, such as TRACE, DEBUG, INFO, WARN, and ERROR, to facilitate log configuration and filtering
 2. Log entry/exit points and key waypoints at an appropriate log severity level, such as TRACE or DEBUG.
 3. Avoid logging payload contents in bulk. In cases where some amount of payload logging is necessary for forensics, consider which elements are truly necessary and which elements are sensitive and should be masked or otherwise protected.
 4. Ensure that your framework, or your log statements, provide you enough information to follow the thread of execution of a particular flow even if it is interleaved with output from other threads of execution.
@@ -69,7 +70,7 @@ To help balance the above considerations, here are recommended best practices:
 3. How quickly is the database responding to my requests?
 4. Are any of my servers running out of memory?
 5. Are my CPU loads aberrantly high?
-6. Is my applicatoin currently running?
+6. Is my application currently running?
 7. How many requests have I processed successfully in the last hour?
 
 To answer questions such as this, you will need to have instrumentaiton to provide you this information, and monitoring mechanisms in place to report history, provide you easy-to-interpret dashboards, and alert you to active problems.
@@ -81,9 +82,8 @@ Key points to emphasize on that last point, alerting, are:
 3. Ensure your alerting mechanism is at least as reliable as the system being observed. Alerting via e-mail (which may not be deemed mission-critical from an enterprise tiering perspective) is not acceptable for a core mission critical business system.
 4. Remember that your monitoring solution should be less complicated than the system you are monitoring. Monitoring and Alerting systems seem probe to over-engineering, and this complexity should be scrutinized carefully.
 
-
-
-
 ### Maintainability
 
+
+### Availability and Capacity
 
